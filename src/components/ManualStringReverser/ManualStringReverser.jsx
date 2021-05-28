@@ -6,10 +6,35 @@ Copyright (c) Geekofia 2021 and beyond
 */
 
 import React from 'react';
+import Layout from '../Layout';
+
+import { useInputText } from 'geekofia-hooks';
+
+// styles
 import styles from './ManualStringReverser.module.sass';
 
 const ManualStringReverser = () => {
-	return <div className={styles.root}>Manual String Reversal</div>;
+	const [text, bindText, resetText] = useInputText('');
+
+	return (
+		<Layout className={styles.root}>
+			<div className={styles.upper}>
+				<h2>Original</h2>
+				<input
+					type="text"
+					id="inputText"
+					{...bindText}
+					placeholder="Type something..."
+				/>
+			</div>
+			{text && (
+				<div className={styles.lower}>
+					<h2>Reversed</h2>
+					<p>{Array.from(text).reverse().join('')}</p>
+				</div>
+			)}
+		</Layout>
+	);
 };
 
 export default ManualStringReverser;

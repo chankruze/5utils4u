@@ -6,17 +6,24 @@ Copyright (c) Geekofia 2020 and beyond
 */
 
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import BMICalculator from './BMICalculator/BMICalculator';
 import ManualStringReverser from './ManualStringReverser/ManualStringReverser';
 import PrimeNumberChecker from './PrimeNumberChecker/PrimeNumberChecker';
 import DecimalToBinary from './DecimalToBinary/DecimalToBinary';
 import CrossSumOfANumber from './CrossSumOfANumber/CrossSumOfANumber';
 import ArraySorter from './ArraySorter/ArraySorter';
+import PageCard from './PageCard';
 // import PageNotFound from './PageNotFound';
 
-import styles from './App.module.sass';
+import { ImCalculator } from 'react-icons/im';
+import { FaRev, FaSortAmountDown } from 'react-icons/fa';
+import { AiOutlineNumber } from 'react-icons/ai';
+import { GoFileBinary, GoPlus } from 'react-icons/go';
 
-import PageCard from './PageCard';
+import { randColHex } from '../utils';
+
+import styles from './App.module.sass';
 
 const App = () => {
 	return (
@@ -24,15 +31,39 @@ const App = () => {
 			<div className={styles.app}>
 				<Switch>
 					<Route exact path="/">
-						<h1 className={styles.heading}>5utils4u</h1>
+						<h1 className={styles.heading}>6utils4u</h1>
 						<div className={styles.container}>
-							<PageCard name="Manual String Reverser" />
-							<PageCard name="Prime Number Checker" />
-							<PageCard name="Decimal To Binary" />
-							<PageCard name="Cross Sum of a Number" />
-							<PageCard name="Array Sorter" />
+							<PageCard
+								name="BMI Calculator"
+								icon={<ImCalculator size={32} color={randColHex()} />}
+							/>
+							<PageCard
+								name="Manual String Reverser"
+								icon={<FaRev size={32} color={randColHex()} />}
+							/>
+							<PageCard
+								name="Prime Number Checker"
+								icon={
+									<AiOutlineNumber size={32} color={randColHex()} />
+								}
+							/>
+							<PageCard
+								name="Decimal To Binary"
+								icon={<GoFileBinary size={32} color={randColHex()} />}
+							/>
+							<PageCard
+								name="Cross Sum of a Number"
+								icon={<GoPlus size={32} color={randColHex()} />}
+							/>
+							<PageCard
+								name="Array Sorter"
+								icon={
+									<FaSortAmountDown size={32} color={randColHex()} />
+								}
+							/>
 						</div>
 					</Route>
+					<Route exact path="/bmi-calculator" component={BMICalculator} />
 					<Route
 						exact
 						path="/manual-string-reverser"
@@ -54,7 +85,7 @@ const App = () => {
 					/>
 
 					<Route exact path="/array-sorter" component={ArraySorter} />
-					{/* <Route path="/" component={PageNotFound} /> */}
+					{/* <Route path="*" component={PageNotFound} /> */}
 				</Switch>
 			</div>
 		</Router>

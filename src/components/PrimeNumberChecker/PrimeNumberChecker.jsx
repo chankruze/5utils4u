@@ -6,9 +6,10 @@ Copyright (c) Geekofia 2021 and beyond
 */
 
 import React from 'react';
+import Layout from '../Layout';
 
 const PrimeNumberChecker = () => {
-	return <div></div>;
+	return <Layout></Layout>;
 };
 
 export default PrimeNumberChecker;
