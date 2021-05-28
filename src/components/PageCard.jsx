@@ -10,7 +10,6 @@ import { Link } from 'react-router-dom';
 
 import styles from './PageCard.module.sass';
 
-// eslint-disable-next-line
 const PageCard = ({ name, icon }) => {
 	let link = `/${name.toLowerCase().replaceAll(' ', '-')}`;
 
