@@ -5,7 +5,6 @@ Created: Thu May 27 2021 22:36:47 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2021 and beyond
 */
 
-import React from 'react';
 import Layout from '../Layout';
 import { useInputText } from 'geekofia-hooks';
 

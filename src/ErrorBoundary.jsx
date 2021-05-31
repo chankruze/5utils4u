@@ -5,10 +5,10 @@ Created: Mon May 31 2021 12:55:58 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2021 and beyond
 */
 
-import React from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class ErrorBoundary extends React.Component {
+export class ErrorBoundary extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {

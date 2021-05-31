@@ -5,8 +5,6 @@ Created: Fri May 28 2021 09:30:34 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2021 and beyond
 */
 
-import React from 'react';
-
 export const getBMIStatus = (bmi) => {
 	// Obesity (Class III)
 	if (bmi > 40) return <h3 style={{ color: 'red' }}>Obesity - Class III</h3>;

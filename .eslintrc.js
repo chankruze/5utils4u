@@ -14,5 +14,9 @@ module.exports = {
 		allowImportExportEverywhere: true
 	},
 	plugins: ['react'],
-	rules: { 'react/no-unescaped-entities': 0, 'react/prop-types': 0 }
+	rules: {
+		'react/no-unescaped-entities': 0,
+		'react/prop-types': 0,
+		'react/react-in-jsx-scope': 0
+	}
 };

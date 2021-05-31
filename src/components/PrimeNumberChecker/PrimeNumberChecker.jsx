@@ -5,7 +5,6 @@ Created: Thu May 27 2021 23:04:49 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2021 and beyond
 */
 
-import React from 'react';
 import { useInputFloat } from 'geekofia-hooks';
 import Layout from '../Layout';
 

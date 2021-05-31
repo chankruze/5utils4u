@@ -5,7 +5,6 @@ Created: Fri May 28 2021 09:38:13 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2021 and beyond
 */
 
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { randColRGB } from '../utils';

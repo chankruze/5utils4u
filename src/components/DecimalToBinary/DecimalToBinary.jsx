@@ -5,7 +5,6 @@ Created: Thu May 27 2021 23:05:05 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2021 and beyond
 */
 
-import React from 'react';
 import Layout from '../Layout';
 import { useInputFloat } from 'geekofia-hooks';
 
@@ -35,7 +34,6 @@ const DecimalToBinary = () => {
 				{!isNaN(number) && (
 					<div className={styles.bottom}>
 						<p>{dec2bin()}</p>
-						<button onClick={helloPuta}>check</button>
 					</div>
 				)}
 			</div>

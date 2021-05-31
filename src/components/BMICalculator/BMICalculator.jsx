@@ -5,7 +5,7 @@ Created: Fri May 28 2021 09:28:31 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2021 and beyond
 */
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useInputFloat, useInputSelect } from 'geekofia-hooks';
 import { getBMIStatus } from '../../utils';
 
