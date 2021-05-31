@@ -7,7 +7,6 @@ Copyright (c) Geekofia 2021 and beyond
 
 import React from 'react';
 import Layout from '../Layout';
-
 import { useInputText } from 'geekofia-hooks';
 
 // styles
@@ -25,6 +24,7 @@ const ManualStringReverser = () => {
 					id="inputText"
 					{...bindText}
 					placeholder="Type something..."
+					autoComplete="off"
 				/>
 			</div>
 			{text && (

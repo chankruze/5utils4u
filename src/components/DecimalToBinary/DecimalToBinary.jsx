@@ -7,9 +7,40 @@ Copyright (c) Geekofia 2021 and beyond
 
 import React from 'react';
 import Layout from '../Layout';
+import { useInputFloat } from 'geekofia-hooks';
+
+import styles from './DecimalToBinary.module.sass';
 
 const DecimalToBinary = () => {
-	return <Layout></Layout>;
+	const [number, bindNumber, resetNumber] = useInputFloat();
+
+	const dec2bin = () => {
+		if (typeof number === 'number') {
+			return (Number(number) >>> 0).toString(2);
+		}
+	};
+
+	return (
+		<Layout className={styles.root}>
+			<div className={styles.card}>
+				<div className={styles.top}>
+					<input
+						type="number"
+						id="num"
+						placeholder="Enter a no..."
+						{...bindNumber}
+					/>
+				</div>
+
+				{!isNaN(number) && (
+					<div className={styles.bottom}>
+						<p>{dec2bin()}</p>
+						<button onClick={helloPuta}>check</button>
+					</div>
+				)}
+			</div>
+		</Layout>
+	);
 };
 
 export default DecimalToBinary;
